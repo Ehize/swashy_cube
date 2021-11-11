@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CubeCollision : MonoBehaviour
 {	
@@ -8,13 +9,25 @@ public class CubeCollision : MonoBehaviour
 	public Player player;
 	public AudioClip splashSound;
 
+	public TextMeshProUGUI scoreText;
+	private int score;
+
 	void Start()
 	{
 		player = GameObject.Find("Player").GetComponent<Player>();
+		score = 0;
+		UpdateScore(10);
 	}
 	
 	private void Awake() {
 		cube = GetComponent<Cube>();
+	}
+
+	//Score Update
+	public void UpdateScore(int scoreToAdd) 
+	{
+		score += scoreToAdd;
+		scoreText.text = "Score: " + score;
 	}
 	   
     private void OnCollisionEnter(Collision collision) {
@@ -26,6 +39,8 @@ public class CubeCollision : MonoBehaviour
 		//checks if both cubes have the same number
 		if(cube.CubeNumber == otherCube.CubeNumber) {
 		  Debug.Log("HIT : " + cube.CubeNumber);
+		  
+
 		  Vector3 contactPoint = collision.contacts[0].point;
 	
 		//checks if cube number is less than maximum in spawnmanager:
