@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Player : MonoBehaviour
 	private Vector3 cubePos;
 
 	public AudioSource playerAudio;
+
+	public TextMeshProUGUI scoreText;
+	public int score;
 	
     // Start is called before the first frame update
     private void Start()
@@ -28,7 +32,17 @@ public class Player : MonoBehaviour
         touchSlider.OnPointerDownEvent += OnPointerDown;
 		touchSlider.OnPointerDragEvent += OnPointerDrag;
 		touchSlider.OnPointerUpEvent += OnPointerUp;
+
+		score = 0;
+		UpdateScore(0);
     }
+
+	//Score Update
+	public void UpdateScore(int scoreToAdd) 
+	{
+		score += scoreToAdd;
+		scoreText.text = "Score: " + score;
+	}
 	
 	private void Update() {
 		if(isPointerDown)

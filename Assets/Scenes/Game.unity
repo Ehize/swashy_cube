@@ -425,6 +425,8 @@ MonoBehaviour:
   cubeMaxPosX: 1.214
   touchSlider: {fileID: 144174071}
   playerAudio: {fileID: 0}
+  scoreText: {fileID: 826880479}
+  score: 0
 --- !u!4 &437367008
 Transform:
   m_ObjectHideFlags: 0

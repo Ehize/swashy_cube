@@ -1148,6 +1148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   splashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
+  scoreText: {fileID: 0}
+  score: 0
 --- !u!1 &8617233515970045774
 GameObject:
   m_ObjectHideFlags: 0
