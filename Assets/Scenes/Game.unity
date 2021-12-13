@@ -1160,9 +1160,9 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293047811
-  m_fontColor: {r: 0.011764706, g: 0.7137255, b: 0.8862745, a: 1}
-  m_enableVertexGradient: 1
+    rgba: 4293980141
+  m_fontColor: {r: 0.93004626, g: 0.94076216, b: 0.9433962, a: 1}
+  m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 0.7169812, g: 0.33481666, b: 0.33481666, a: 1}
@@ -1179,10 +1179,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 31.24
+  m_fontSize: 44.75
   m_fontSizeBase: 31.24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 8
@@ -1250,7 +1250,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826880477}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &844158734
 GameObject:
   m_ObjectHideFlags: 0

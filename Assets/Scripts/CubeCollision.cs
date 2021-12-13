@@ -65,7 +65,14 @@ public class CubeCollision : MonoBehaviour
 	   SpawnManager.Instance.DestroyCube(cube);
 	   SpawnManager.Instance.DestroyCube(otherCube);
 	   player.UpdateScore(10);
-	 } 
+	 }
+     
+	 //Reduce score if any cube collide with non-identical match
+	 if(cube.CubeNumber != otherCube.CubeNumber) {
+       player.UpdateScore(-10);
+	 } else {
+	   player.UpdateScore(100);
+	 }
    }
 
    
