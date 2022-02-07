@@ -9,6 +9,18 @@ public class DangerZone : MonoBehaviour
 {
    public TextMeshProUGUI gameOverText;
    public Button restartButton;
+   public Button mainMenuButton;
+   public Button quitButton;
+
+   public AudioClip gameOverSound;
+
+   public Player player;
+
+
+   void Start() 
+   {
+	   player = GameObject.Find("Player").GetComponent<Player>();
+   }
 
 //    public TouchSlider touchSlider;
    
@@ -20,9 +32,12 @@ public class DangerZone : MonoBehaviour
    private void OnTriggerStay (Collider other) {
 	   Cube cube = other.GetComponent<Cube>();
 	   if(cube != null) {
-		   if(!cube.IsMainCube && cube.CubeRigidbody.velocity.magnitude < .1f){
+		   if(!cube.IsMainCube && cube.CubeRigidbody.velocity.magnitude < .1f) {
+			   player.playerAudio.PlayOneShot(gameOverSound, 1.0f);
 			   gameOverText.gameObject.SetActive(true);
 			   restartButton.gameObject.SetActive(true);
+			   mainMenuButton.gameObject.SetActive(true);
+			   quitButton.gameObject.SetActive(true);
 			   Time.timeScale = 0;
 			// Debug.Log("Game Over");
 		   }
@@ -33,5 +48,15 @@ public class DangerZone : MonoBehaviour
    {
 	   Time.timeScale = 1;
 	   SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+   }
+
+   public void QuitGame() {
+        Application.Quit();
+        Debug.Log("Quit");
+   }
+
+   public void MainMenu() 
+   {
+	   SceneManager.LoadScene(0);
    }
 }
