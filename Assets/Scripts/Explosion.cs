@@ -4,9 +4,9 @@ public class Explosion : MonoBehaviour
 {
   
    
-   [SerializeField] private ParticleSystem cubeExplosionFX ;
+   [SerializeField] private ParticleSystem cubeExplosionFX;
 
-   ParticleSystem.MainModule cubeExplosionFXMainModule ;
+   ParticleSystem.MainModule cubeExplosionFXMainModule;
 	//singletonclass
 	public static Explosion Instance;
 	

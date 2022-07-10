@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class DangerZone : MonoBehaviour
 {
    public TextMeshProUGUI gameOverText;
+   public TextMeshProUGUI scoreText;
+   public TextMeshProUGUI highScoreText;
    public Button restartButton;
    public Button mainMenuButton;
    public Button quitButton;
@@ -16,10 +18,16 @@ public class DangerZone : MonoBehaviour
 
    public Player player;
 
-
    void Start() 
    {
 	   player = GameObject.Find("Player").GetComponent<Player>();
+       highScoreText.text = "Best Score\n" + PlayerPrefs.GetInt("HighScore", 0);
+   }
+
+
+   void Update() 
+   {
+       scoreText.text = player.score.ToString();
    }
 
 //    public TouchSlider touchSlider;
@@ -34,12 +42,20 @@ public class DangerZone : MonoBehaviour
 	   if(cube != null) {
 		   if(!cube.IsMainCube && cube.CubeRigidbody.velocity.magnitude < .1f) {
 			   player.playerAudio.PlayOneShot(gameOverSound, 1.0f);
+               scoreText.gameObject.SetActive(false);
+               highScoreText.gameObject.SetActive(true);
 			   gameOverText.gameObject.SetActive(true);
 			   restartButton.gameObject.SetActive(true);
 			   mainMenuButton.gameObject.SetActive(true);
 			   quitButton.gameObject.SetActive(true);
 			   Time.timeScale = 0;
 			// Debug.Log("Game Over");
+
+            if(player.score > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", player.score);
+            }
+            player.score = 0;
 		   }
 	   }
    }
