@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899528548b8822b478d6be5aed1d8050, type: 3}
-  m_Name: ApplicationManager
+  m_Script: {fileID: 11500000, guid: afde042156902ab4b9521d2a74eb2466, type: 3}
+  m_Name: OnSceneChanged
   m_EditorClassIdentifier: 
-  OnSceneLoad: {fileID: 11400000, guid: 7dfb5e998e8d1564a85ccc9ebc37190e, type: 2}
+  OnRaise:
+    m_PersistentCalls:
+      m_Calls: []
