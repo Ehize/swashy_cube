@@ -10,9 +10,8 @@ public class DangerZone : MonoBehaviour
    public TextMeshProUGUI gameOverText;
    public TextMeshProUGUI scoreText;
    public TextMeshProUGUI highScoreText;
-   public Button restartButton;
    public Button mainMenuButton;
-   public Button quitButton;
+   public Button retryButton;
 
    public AudioClip gameOverSound;
 
@@ -45,9 +44,8 @@ public class DangerZone : MonoBehaviour
                scoreText.gameObject.SetActive(false);
                highScoreText.gameObject.SetActive(true);
 			   gameOverText.gameObject.SetActive(true);
-			   restartButton.gameObject.SetActive(true);
 			   mainMenuButton.gameObject.SetActive(true);
-			   quitButton.gameObject.SetActive(true);
+			   retryButton.gameObject.SetActive(true);
 			   Time.timeScale = 0;
 			// Debug.Log("Game Over");
 
@@ -73,6 +71,6 @@ public class DangerZone : MonoBehaviour
 
    public void MainMenu() 
    {
-	   SceneManager.LoadScene(0);
+	   SceneManager.LoadScene(1);
    }
 }

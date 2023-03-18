@@ -69,7 +69,7 @@ public class CubeCollision : MonoBehaviour
      
 	 //Reduce score if any cube collide with non-identical match
 	 if(cube.CubeNumber != otherCube.CubeNumber) {
-       player.UpdateScore(-10);
+       player.UpdateScore(0);
 	 } else {
 	   player.UpdateScore(100);
 	 }
