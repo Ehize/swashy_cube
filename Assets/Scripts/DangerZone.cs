@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class DangerZone : MonoBehaviour
 {
-   public TextMeshProUGUI gameOverText;
+   public GameObject gameOverPanel;
    public TextMeshProUGUI scoreText;
    public TextMeshProUGUI highScoreText;
-   public Button mainMenuButton;
-   public Button retryButton;
+//    public Button mainMenuButton;
+//    public Button retryButton;
 
    public AudioClip gameOverSound;
 
@@ -43,9 +43,9 @@ public class DangerZone : MonoBehaviour
 			   player.playerAudio.PlayOneShot(gameOverSound, 1.0f);
                scoreText.gameObject.SetActive(false);
                highScoreText.gameObject.SetActive(true);
-			   gameOverText.gameObject.SetActive(true);
-			   mainMenuButton.gameObject.SetActive(true);
-			   retryButton.gameObject.SetActive(true);
+			   gameOverPanel.SetActive(true);
+			//    mainMenuButton.gameObject.SetActive(true);
+			//    retryButton.gameObject.SetActive(true);
 			   Time.timeScale = 0;
 			// Debug.Log("Game Over");
 
