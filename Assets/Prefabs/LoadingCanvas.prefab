@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.9356, y: -17.01181}
-  m_SizeDelta: {x: 2136.531, y: 3592.2188}
+  m_AnchoredPosition: {x: -5.9356, y: -2.6692}
+  m_SizeDelta: {x: 2136.531, y: 4213.7266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2699027689909304913
 CanvasRenderer:
@@ -133,7 +133,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!114 &2699027690089956801
 MonoBehaviour:
@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0639bb5a9450b1541901ae671909bacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Game
-  countDownTime: 2
+  sceneName: StartMenu
+  countDownTime: 3
   sceneFader: {fileID: 0}
 --- !u!1 &2699027690677002032
 GameObject:

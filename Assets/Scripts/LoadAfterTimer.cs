@@ -20,7 +20,7 @@ public class LoadAfterTimer : MonoBehaviour
 
         if (timeElapsed > delayBeforeLoading)
         {
-            SceneManager.LoadScene("Start Menu");
+            SceneManager.LoadScene("StartMenu");
         }
     }
 }

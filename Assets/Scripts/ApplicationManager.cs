@@ -8,6 +8,7 @@ public class ApplicationManager : ScriptableObject
     [FancyHeader("APPLICATION MANAGER", 3f, "#D4AF37", 8.5f, order = 0)]
     [Space]
     public GameEvent OnSceneLoad;
+    public GameEvent OnGameOver;
 
 
     public void PauseGame()
